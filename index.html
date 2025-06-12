@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title></title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/scipo.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+				<section>
+					<h4 style ="color:#333">75th ANNUAL ICA CONFERENCE</h4>
+					<h3>Is a Picture Worth More than a Thousand Words? <br>Computational Analysis of Images and Texts</h3>
+					<h4 style ="color:#333">Justin Chun-ting Ho, A. Marthe Möller,<br>Joanna Strycharz, Rhianne W. Hoek</h4>
+					<p><img src="uvalogo.png" width="25%" style="background:none; border:none; box-shadow:none;">
+						<img src="ascorlogo.png" width="35%" style="background:none; border:none; box-shadow:none;"></p>
+					<!-- <p><b>Slides: <a href="https://edu.nl/ukqbr">https://edu.nl/ukqbr</a></b></p> -->				</section>
+				<section>
+					Automatic analysis of image, audio, and video content for a long time seemed nigh impossible. <br> ---- <a href="https://doi.org/10.1080/19312458.2023.2261372">Kroon et al. (2023)</a>
+				</section>
+				<section>
+					<h3>Pixels</h3>
+					<img src="pixels.jpg" width="80%" style="background:none; border:none; box-shadow:none;"><br>
+					<small>Credit: Julie Waterhouse Photography; Ultimate-Photo-Tips.com</small>
+				</section>
+				<section data-background-image="cnn_embed_1k.jpg">
+				<div style="background-color:rgba(255,255,255,0.7)">
+					<h2>ImageNet</h2>
+				</div>
+				</section>
+				<section>
+					<img src="radford.jpeg" width="80%" style="background:none; border:none; box-shadow:none;"><br>
+					<small><a href="https://doi.org/10.48550/arXiv.2103.00020">(Radford et al, 2021)</a></small>
+				</section>
+				<section>
+					<h2>Is it useful?</h2>
+				</section>
+				<section>
+						<h2>Data</h2>
+						<ul>
+							<li>Instagram posts of 44 Dutch green influencer</li>
+							<li>283 posts, 794 images (with caption)</li>
+							<li>Coded manually for the themes</li>
+						</ul>
+				</section>
+				<section>
+						<h2>Analysis</h2>
+						<ul>
+							<li>Topic modelling with various approaches using <br>BERTopic and CLIP (zero-shot approach as baseline)</li>
+							<li>What many themes can be detected?</li>
+							<li>How accurate are these models?</li>
+						</ul>
+				</section>
+				<section>
+					<section>
+						<img src="approaches.png" class="stretch" style="background:none; border:none; box-shadow:none;">
+					</section>
+					<section data-background-size="100%" data-background-iframe="multimodal.html">
+					</section>
+				</section>
+<!-- 				<section>
+					<h4>Coverage</h4>
+					<img src="coverage.png" class="stretch" style="background:none; border:none; box-shadow:none;"><br>
+				</section> -->
+				<section>
+					<h4>Correct Classification Rate</h4>
+					<img src="overall.png" class="stretch" style="background:none; border:none; box-shadow:none;"><br>
+				</section>
+				<section>
+					<h4>Correct Classification Rate by Topic</h4>
+					<img src="accbytopic.png" class="stretch" style="background:none; border:none; box-shadow:none;"><br>
+				</section>
+				<section>
+					<h4>Alignment between texts and images</h4>
+					<img src="cossim.png" class="stretch" style="background:none; border:none; box-shadow:none;"><br>
+				</section>
+				<section>
+					<h4>Correct Classification Rate by Influencer</h4>
+					<img src="accbyinfluencer.png" class="stretch" style="background:none; border:none; box-shadow:none;"><br>
+				</section>
+				<section>
+					<h3>Takeaways</h3>
+					<p><ul>
+						<li>Multimodal is not always benefitial</li>
+						<li>Text can do a pretty good job in most cases</li>
+						<li>Stylistic differences matter</li>
+					</ul></p>
+				</section>
+
+				<section>
+					<h2>Thank You!</h2>
+					<h4>Bluesky: @justinho.bsky.social<br>Github: justinchuntingho<br>Email: j.c.ho@uva.nl<br>Website: <a href="https://justinchuntingho.github.io/">justinchuntingho.github.io</a></h4>
+				</section>
+				</div>
+			</div>
+
+			<script src="dist/reveal.js"></script>
+			<script src="plugin/notes/notes.js"></script>
+			<script src="plugin/markdown/markdown.js"></script>
+			<script src="plugin/highlight/highlight.js"></script>
+			<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+				Reveal.initialize({
+					hash: true,
+					slideNumber: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+					plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				});
+			</script>
+		</body>
+		</html>
